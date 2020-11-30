@@ -1,9 +1,14 @@
-//const token = process.env.API_TOKEN
+import os  from "../node_modules/dotenv"
+import load_dotenv from "../node_modules/dotenv"
+load_dotenv()
+
+const token = os.getenv('PROJECT_API_KEY')
+
 function fetchData() {
   fetch('https://cors-anywhere.herokuapp.com/https://api.github.com/graphql', {
     method: 'POST',
     headers: {
-      "Authorization": "Bearer c3a512cd988b1cb3fcaa94fc5a32c8dae3282b67",
+      "Authorization": `Bearer ${token}`,
       "Content-Type": "application/json",
       
     },
