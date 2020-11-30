@@ -56,8 +56,8 @@ function renderData (data) {
     user_bio.querySelector('.fname').textContent = data.user.name
     user_bio.querySelector('.username').textContent = data.user.login
     user_bio.querySelector('.user_description').textContent = data.user.bio
-    user_bio_img.querySelector('img').setAttribute('src') = data.user.avatarUrl
-    header_profile_img.querySelector('img').setAttribute('src') = data.user.avatarUrl
+    user_bio_img.querySelector('img').setAttribute('src', data.user.avatarUrl )  
+    header_profile_img.querySelector('img').setAttribute('src', data.user.avatarUrl) 
 
     
     counter.textContent = data.user.repositories.nodes.length
