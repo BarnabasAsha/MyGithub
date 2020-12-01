@@ -47,7 +47,7 @@ function fetchData() {
 function renderData (data) {
     const header_profile_img = document.querySelector('.header_profile_img')
     const user_bio = document.querySelector('.aside')
-    const user_bio_img = document.querySelector('.user_bio_img')
+    const user_bio_img = document.querySelector('.user-bio_img')
     const repositories = document.querySelector('.repositories_cluster')
     const count = document.querySelector('.count')
     const counter = document.querySelector('.counter')
