@@ -58,21 +58,23 @@ function renderData (data) {
     user_bio.querySelector('.user_description').textContent = data.user.bio
     user_bio_img.querySelector('img').setAttribute('src', data.user.avatarUrl )  
     header_profile_img.querySelector('img').setAttribute('src', data.user.avatarUrl) 
-
-    
     counter.textContent = data.user.repositories.nodes.length
     count.textContent = data.user.repositories.nodes.length
+
     data.user.repositories.nodes.map( repo => {
        const repo_entity = document.createElement('li')
        repo_entity.className = 'repo_entity'
        repo_entity.innerHTML = `
        <div class="col1">
                             <a href="#" class="repo-title">${repo.name}</a>
-                            <p class="repo-desc">${repo.description}</p>
+                            <p class="repo-desc">${
+                              repo.description === null ? '' :
+                              repo.description
+                            }</p>
                             <div class="repo-meta">
                                 <span class="meta-language"></span>
                                 Updated
-                                <span class="meta-time">${(repo.updatedAt)}</span>
+                                <span class="meta-time">${(repo.updatedAt.slice(0,10))}</span>
                             </div>
                         </div>
                         <div class="col2">

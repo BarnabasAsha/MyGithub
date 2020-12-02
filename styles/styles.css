@@ -129,10 +129,14 @@
 }
 
 .sticky_nav a {
-    font-size: 16px;    
+    font-size: 14px;    
     line-height: 30px;
     color: var(--offblack);
-    padding: 8px 16px;
+    padding: 8px 19px;
+}
+
+.sticky_nav a .sticky_icon {
+    display: none;
 }
 
 .sticky_nav .active {
@@ -143,8 +147,6 @@
 .sticky_nav .active:hover {
     border-bottom: 1.6px solid #f9826c;
 }
-
-
 
 .sticky_nav .active .count {
     display: inline-block;
@@ -235,6 +237,10 @@
     background-color: rgb(243, 244, 246);
     border: 1px solid var(--border-bottom);
     cursor: pointer;
+}
+
+.repo_entity .repo-action:hover {
+    background-color: rgb(250, 251, 252);
 }
 
 
@@ -343,6 +349,7 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
+        overflow: hidden;
     }
 
     /* Wrapper  Main Content */
@@ -369,6 +376,7 @@
     }
     
     .user-bio_img {
+        margin-top: 1.5em;
         width: 170px;
         height: 170px;
         z-index: 10;
@@ -378,7 +386,12 @@
         margin-left: -27vw;
         width: 100vw;
         position: sticky;
-        padding-left: 40%;
+        padding-left: 28vw;
+    }
+
+    .sticky_nav a .sticky_icon {
+        display: inline-block;
+        margin-right: 4px;
     }
 
     .aside .status {
@@ -389,8 +402,8 @@
         height: 35px;
         border-radius: 50%;
         position: absolute;
-        top: 30%;
-        right: 25%;
+        top: 50%;
+        right: 0;
         z-index: 12;
         font-size: 1.1rem;
         padding: 0;
@@ -404,9 +417,29 @@
 }
 
 @media screen and (min-width: 1012px) {
+    .header .form_decor {
+        display: none;
+    }
+
     .nav_hide {
         display: inline-block;
         margin-left: 5px;
+    }
+
+    .user-bio_img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .aside .status {
+        top: 55%;
+        right: 18%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .aside .status {
+        right: 32%;
     }
 }
 
