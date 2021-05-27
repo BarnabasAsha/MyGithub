@@ -1,0 +1,20 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": "warn"
+    },
+    "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    }
+  }

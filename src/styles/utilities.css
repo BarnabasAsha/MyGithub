@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
     overflow-x: hidden;
@@ -12,16 +18,12 @@ a {
     --fullback: #000;
     --offblack: rgb(36, 41, 46);
     --offwhite: rgba(255, 255, 255, 0.7);
-    --border-bottom: #d1d5da;
+    --border-bottom: #eaecef;
     --blue-text:  rgb(3, 102, 214);
 }
 
 h1 {
     font-weight: 600;
-}
-
-p {
-    font-size: 14px;
 }
 
 ul {
@@ -55,5 +57,11 @@ button {
     border-bottom: 0 solid transparent;
     border-left: 4px solid transparent;   
     margin-left: 5px; 
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
 }
 
