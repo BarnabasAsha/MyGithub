@@ -1,4 +1,4 @@
-// import 'regenerator-runtime/runtime'
+import 'regenerator-runtime/runtime'
 const token = process.env.GITHUB_APP_API_KEY
 
 async function fetchData() {
