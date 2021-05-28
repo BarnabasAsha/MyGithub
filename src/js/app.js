@@ -191,8 +191,6 @@ const handleTime = (updatedAt) => {
   }
 };
 
-import 'regenerator-runtime/runtime'
-
 function handleSticky() {
   const observerOptions = {
     root: null,
