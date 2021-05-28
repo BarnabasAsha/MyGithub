@@ -4,8 +4,7 @@
   "description": "A webapp that fetch the github repo of a github user by inputing the user name",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BarnabasAsha/MyGithub/issues"
   },
-  "homepage": "https://github.com/BarnabasAsha/MyGithub#readme"
+  "homepage": "https://github.com/BarnabasAsha/MyGithub#readme",
+  "dependencies": {
+    "regenerator-runtime": "^0.13.7"
+  }
 }

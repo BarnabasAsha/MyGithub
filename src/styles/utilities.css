@@ -61,7 +61,12 @@ button {
 
 input[type=text]:focus {
     outline: none;
-    border: 1px solid #e1e4e8;
+    border: 1px solid #79b8ff;
     border-radius: 6px;
 }
-
+  
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -44,7 +44,7 @@ export default function renderData(data) {
         const apiTimeMonth = apiTime.getMonth()
         const apiTimeYear = apiTime.getFullYear()
         
-        const microSecondsDiff = Math.abs(apiTimeStamp - currentTimeStamp)
+        const microSecondsDiff = Math.abs(currentTimeStamp - apiTimeStamp)
         const daysDiff = Math.round(microSecondsDiff / (1000 * 60 * 60  * 24));
         const hourDiff = Math.round(microSecondsDiff / (1000 * 60 * 60));
         const minDiff = Math.round(microSecondsDiff / (1000 * 60));
@@ -58,8 +58,12 @@ export default function renderData(data) {
           return `${hourDiff} hours ago`
         }else if(daysDiff >= 1 && daysDiff <= 30 ) {
           return `${daysDiff} days ago`
+        }else if(apiTimeYear !== currentTimeYear) {
+          return `on ${months[apiTimeMonth]} ${apiTimeDay} ${apiTimeYear}`
         } else if(apiTimeYear === currentTimeYear) {
           return `on ${months[apiTimeMonth]} ${apiTimeDay}`
+        } else {
+          return 'null'
         }
       }
 
