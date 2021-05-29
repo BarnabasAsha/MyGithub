@@ -18,18 +18,35 @@
 }
 
 .header_mobile_menu {
-    font-size: 1.6rem;
-    color: var(--fullwhite);
+    width: 22px;
+    height: 2px;
+    background: var(--fullwhite);
+    position: relative;  
+}
+
+.header_mobile_menu::after, .header_mobile_menu::before {
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 2px;    
+    background: var(--fullwhite);
+}
+
+.header_mobile_menu::before {
+    top: -8px;
+}
+
+.header_mobile_menu::after {
+    bottom: -8px;
 }
 
 .header_logo {
-    font-size: 2.2rem;
-    color: var(--fullwhite);
+    fill: var(--fullwhite);
+    transform: scale(2);
 }
 
 .header_bell {
-    font-size: 1.12rem;
-    color: var(--fullwhite);
+    fill: var(--fullwhite);
     position: relative;
 }
 
@@ -39,14 +56,14 @@
     border-radius: 50%;
     background: linear-gradient(#54a3ff,#006eed);;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -5px;
+    right: 1px;
 }
 
 @media screen and (min-width: 768px) {
     .header {
         padding: 16px 1em;
-        margin-bottom: 1.8em;
+        margin-bottom: 0.7em;
     }
 
     .header_mobile_menu {
@@ -78,6 +95,10 @@
     
     .header_col2 > * {
         margin-left: 15px;
+    }
+
+    .header_logo {
+        margin-right: 10px;
     }
 
     .header_search {
@@ -115,7 +136,7 @@
         border: 1px solid  rgba(255, 255, 255, 0.3);
     }
 
-    .header_nav a {
+    .header_nav_link {
         color: var(--fullwhite);
         padding: 0 5px;
         font-weight: 600;
@@ -123,32 +144,12 @@
         line-height: 21px;
     }
 
-    .header_nav a:hover, .header_nav:active {
+    .header_nav_link:hover, .header_nav:active {
         color: var(--offwhite);
     }
 
     .header_plus {
-        overflow: hidden;
-        width: 35px;
-        height: 20px;
-        position: relative;
-    }
-
-    .header_plus .plus {
-        margin-right: 5px;
-    }
-
-    .header_plus .line {
-        width: 1.5px;
-        height: 12px;
-        background-color: var(--fullwhite);
-    }
-
-    .header_plus .line-transform {
-        transform: rotate(90deg);
-        position: absolute;
-        top: 4px;
-        
+        fill: var(--fullwhite);
     }
 
     .header_profile_img {
@@ -162,7 +163,7 @@
 
 @media screen and (min-width: 1012px) {
     .header {
-        padding: 16px 2em;
+        padding: 16px 2.5em;
     }
 
     .header_search {

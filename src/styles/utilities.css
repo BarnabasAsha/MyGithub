@@ -41,7 +41,7 @@ button {
 
 .errors {
     font-size: 0.9rem;
-    color: red;
+    color: #ff0000;
     margin-top: 1em;
     text-align: center;
 }
@@ -63,7 +63,7 @@ button {
     border-right: 4px solid transparent;
     border-bottom: 0 solid transparent;
     border-left: 4px solid transparent;   
-    margin-left: 5px; 
+    margin-left: 4px; 
 }
 
 input[type=text]:focus {
@@ -71,9 +71,4 @@ input[type=text]:focus {
     border: 1px solid #79b8ff;
     border-radius: 6px;
 }
-  
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
+

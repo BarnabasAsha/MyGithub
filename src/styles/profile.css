@@ -52,6 +52,10 @@
     border-radius: 6px;
 }
 
+.bio_status {
+    display: none;
+}
+
 .status:hover {
     color: var(--blue-text);
 }
@@ -59,6 +63,7 @@
 .status .status_text {
     font-size: 14px;
 }
+/* Repositories */
 
 .repositories {
     padding: 0 10px;
@@ -95,7 +100,7 @@
 }
 
 .repo_entity .col1 {
-    width: auto;
+    width: 75%;
 }
 
 .repo_entity .repo-title {
@@ -114,7 +119,7 @@
     vertical-align: baseline;
     font-size: 12px;
     color: rgb(88, 96, 105);
-    margin-top: 1em;
+    margin-top: 1.35em;
     width: auto;
 }
 
@@ -122,17 +127,28 @@
     color: rgb(88, 96, 105);
     margin-top: 7px;
     font-size: 14px;
+    padding-right: 24px;
+    width: 80%;
 }
 
 .repo_entity .repo-action {
-    width: 70px;
-    padding: 3px 10px;
+    padding: 3px 12px;
     font-size: 12px;
     line-height: 20px;
     border-radius: 6px;
-    background-color: rgb(243, 244, 246);
-    border: 1px solid var(--border-bottom);
+    background-color: #fafbfc;
+    border: 1px solid rgba(27, 31, 35, 0.15);
     cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
+}
+
+.repo-action .repo-action_icon {
+    margin-right: 4px;
+    fill: #6a737d;
+    transform: scale(0.9);
 }
 
 .repo_entity .repo-action:hover {
@@ -145,24 +161,28 @@
     align-items: center;
     color: rgb(88, 96, 105);
     fill: rgb(88, 96, 105);
-    margin-right: 18px;
+    margin-right: 16px;
+}
+
+.meta_language.effect {
+    transform: translateY(1.5px);
 }
 
 .meta_language.effect:hover {
     color: var(--blue-text);
     fill: var(--blue-text);
-    align-items: baseline;
 }
 
 .meta_language-color {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     margin-right: 3px;
 }
 
 .meta_language-stars, .meta_language-forks {
+    vertical-align: text-bottom;
     margin-right: 3px;
 }
 
@@ -177,31 +197,35 @@
         padding: 1em;
     }
 
-    .aside {
-        width: 25%;
-        position: relative;
-    }
-
     .main-content {
         width: 75%;
         max-width: 1000px;
     }
 
+    /* Aside */
+
+    .aside {
+        width: 25%;
+        padding: 15px 25px 15px 5px;
+    }
+
     .user-bio {
+        position: relative;
         flex-direction: column;
         align-items: flex-start;
     }
     
     .user-bio_img {
-        margin-top: -55px;
         width: 180px;
         height: 180px;
-        z-index: 10;
+        z-index: 30;
     }
 
-   
-
     .status {
+        display: none;
+     }
+
+    .bio_status {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -209,33 +233,42 @@
         height: 35px;
         border-radius: 50%;
         position: absolute;
-        top: 15%;
-        right: 0em;
-        z-index: 12;
+        top: 50%;
+        right: -12px;
+        bottom: 0;
+        z-index: 40;
         font-size: 1.1rem;
         padding: 0;
         background-color: var(--fullwhite);
+        box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
         overflow: hidden;
+        border: 1px solid rgb(225, 228, 232);
     }
 
-    .status .status_text {
+    .bio_status .status_text {
         display: none;
+        font-size: 14px;
     }
 
-    .status:hover {
-        width: auto;
+    .bio_status:hover {
+        width: 110px;
         border-radius: 28px;
         padding: 9px;
-        right: -2.3em;
+        right: -4.6em;
+        color: var(--blue-text);
     }
 
-    .status:hover .status_text {
+    .bio_status:hover .status_text {
         display: block;
     }
 
 }
 
-@media screen and (min-width: 1012px) {
+
+@media screen and (min-width: 1024px) {
+    .aside {
+        padding: 15px 20px;
+    }
     .repositories {
         padding: 0 20px;
     }
@@ -245,20 +278,42 @@
         height: 216px;
     }
 
+    .bio_status {
+        top: 60%;
+        right: -10px;
+    }
+
+    .bio_status:hover {
+        right: -4.4em;
+    }
     
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1111px) {
+    .bio_status {
+        top: 60%;
+        right: 18px;
+    }
+
+    .bio_status:hover {
+        right: -3.3em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
     .user-bio_img {
         width: 280px;
         height: 280px;
     }
 
-    .status {
-        top: 35%;
-        right: 1.3em;
+    .bio_status {
+        top: 60%;
+        right: 12px;
     }
 
+    .bio_status:hover {
+        right: -3.6em;
+    }
     
 }
 
@@ -266,6 +321,15 @@
     .wrapper {
         max-width: 1300px;
         margin: 0 auto;
+    }
+
+    .bio_status {
+        top: 60%;
+        right: -5px;
+    }
+
+    .bio_status:hover {
+        right: -4.4em;
     }
 }
 

@@ -1,10 +1,9 @@
 .sticky {
     background-color: var(--fullwhite);
-    z-index: 5;
+    z-index: 20;
     position: sticky;
     top: 0;
     left: 0;
-    border-bottom: 1px solid #d1d5da;
 }
 
 .sticky_bio {
@@ -20,24 +19,41 @@
     justify-content: flex-start;
 }
 
-.sticky_nav a {
+.sticky_nav_link {
+    position: relative;
     font-size: 14px;    
     line-height: 30px;
     color: var(--offblack);
     padding: 8px 19px;
+    display: block;
 }
 
-.sticky_nav a .sticky_icon {
+.sticky_nav_link::after {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: "";
+    height: 2px;
+    width: 100%;
+    transition: background .4s;
+    background-color: none;
+}
+
+.sticky_nav_link:hover.sticky_nav_link::after {
+    background-color: #d1d5da;
+}
+
+.sticky_nav_link.active.sticky_nav_link::after {
+    background: #f9826c;
+}
+
+.sticky_nav_link.active:hover .sticky_nav_link::after {
+    background: #f9826c;
+}
+
+.sticky_nav_link .sticky_icon {
     display: none;
-}
-
-.sticky_nav .active {
-    font-weight: 600;
-    border-bottom: 1.6px solid #f9826c;
-}
-
-.sticky_nav .active:hover {
-    border-bottom: 1.6px solid #f9826c;
 }
 
 .sticky_nav .active .count {
@@ -53,21 +69,23 @@
     border-radius: 2em;        
 }
 
-.sticky_nav a:hover {
-    text-decoration: none;
-    border-bottom: 1.6px solid #d1d5da;    
-}
-
 @media screen and (min-width: 768px) {
     .sticky {
         width: 100vw;
         position: sticky;
-        padding-left: 27%;
+        border-bottom: 1px solid var(--border-bottom);
+        padding-left: 40%;
+        transform: translateX(-30%);
     }
 
-    .sticky_nav a .sticky_icon {
+    .sticky_nav_link .sticky_icon {
         display: inline-block;
-        margin-right: 4px;
+        margin-right: 8px;
+        fill: #959da5;
+    }
+
+    .sticky_nav_link.active .sticky_icon {
+        fill: rgb(36, 41, 46);
     }
 
     .sticky_bio {
@@ -76,11 +94,11 @@
         align-items: center;
         position: absolute;
         top: 10px;
-        left: 10%;
+        left: 11%;
     }
 
     .sticky_bio.hidden {
-        display: none;
+        visibility: hidden;
     }
 
     .sticky_avatar {
@@ -97,9 +115,20 @@
     }
 }
 
-@media screen and (min-width: 1412px) {
-  
+@media only screen and (min-width: 1024px) {
     .sticky {
-        padding-left: 30%;
+        padding-left: 43%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .sticky {
+        padding-left: 48%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .sticky {
+        padding-left: 50%;
     }
 }
