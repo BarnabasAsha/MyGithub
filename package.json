@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/BarnabasAsha/MyGithub#readme",
   "dependencies": {
-    "parcel-bundler": "^1.12.5",
     "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }

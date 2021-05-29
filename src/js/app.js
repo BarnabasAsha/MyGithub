@@ -71,8 +71,10 @@ function renderData(data) {
   user_bio.querySelector(".fname").textContent = name;
   user_bio.querySelector(".username").textContent = login;
   user_bio.querySelector(".user_description").textContent = bio;
-  user_bio_img.querySelector("img").setAttribute("src", avatarUrl);
-  user_bio_img.querySelector("img").setAttribute("alt", name);
+  user_bio_img.setAttribute(
+    "style",
+    `background: url(${avatarUrl}); background-size: cover`
+  );
   sticky_avatar.querySelector("img").setAttribute("src", avatarUrl);
   sticky_avatar.querySelector("img").setAttribute("alt", name);
 
