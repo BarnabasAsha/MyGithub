@@ -140,8 +140,8 @@
         color: var(--fullwhite);
         padding: 0 5px;
         font-weight: 600;
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
     }
 
     .header_nav_link:hover, .header_nav:active {

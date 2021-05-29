@@ -31,15 +31,15 @@
 }
 
 .user-bio_name .fname {
-    font-size: 26px;
-    line-height: 1.25;
+    font-size: 1.63px;
+    line-height: 2rem;
 }
 
 .user-bio_name .username {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 1.5rem;
     color: rgb(88, 96, 105);    
 }
 
@@ -61,7 +61,7 @@
 }
 
 .status .status_text {
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 /* Repositories */
 
@@ -88,7 +88,7 @@
 
 .repo-count {
     display: inline-block;
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 
 .repo_entity {
@@ -104,9 +104,9 @@
 }
 
 .repo_entity .repo-title {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 1.88rem;
     color: var(--blue-text);
     margin-bottom: 10px;
 }
@@ -117,7 +117,8 @@
 
 .repo_entity .repo-meta {
     vertical-align: baseline;
-    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 1.13rem;
     color: rgb(88, 96, 105);
     margin-top: 1.35em;
     width: auto;
@@ -126,15 +127,16 @@
 .repo_entity .repo-desc {
     color: rgb(88, 96, 105);
     margin-top: 7px;
-    font-size: 14px;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
     padding-right: 24px;
     width: 80%;
 }
 
 .repo_entity .repo-action {
     padding: 3px 12px;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
     border-radius: 6px;
     background-color: #fafbfc;
     border: 1px solid rgba(27, 31, 35, 0.15);
